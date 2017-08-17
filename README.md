@@ -1,5 +1,12 @@
 # RunIT-QT-Browser
 Python QT5 web browser.
+__________
+Development announcement: RunIT-QT is undergoing a rewrite, which should be completed within few days. The browser will receive more stability and it will accept arguments from command line. The program is also split into different modules.
+
+![run_pre](https://user-images.githubusercontent.com/29865797/29431667-6bf09938-83a1-11e7-96db-cb5ed7cb56fa.jpg)
+
+Notice that the dev. version outlook(above) is not final. Changes might (and probably will) happen before the release.
+______
 
 ![runit](https://user-images.githubusercontent.com/29865797/28456421-ee54c36a-6e0a-11e7-98ff-de87c51c6581.jpg)
 
