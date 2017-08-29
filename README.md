@@ -57,4 +57,4 @@ Run with: python run.py
 
 ______________________________________
 Original post is at:
-http://www.techtimejourney.net/runit-qt-0-5-vol2x-qt5-released/
+http://www.techtimejourney.net/runit-qt-v-0-6-arrives/
