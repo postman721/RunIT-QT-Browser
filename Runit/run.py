@@ -3,9 +3,8 @@
 #for details see: http://www.gnu.org/copyleft/gpl.html. 
 #This is free software, and you are welcome to redistribute it under 
 #GPL Version 2, June 1991
-
-#This is the 0.6 version(Autumn 2017)
-
+#This is the 0.6.1 version(Autumn 2017)
+#This version fixes HTML5 playback issues.
 #####Modules
 from PyQt5 import QtCore, QtGui, QtWidgets, QtWebKitWidgets
 from PyQt5.QtCore import QUrl, Qt
@@ -104,7 +103,6 @@ class Ui_MainWindow(QMainWindow):
                 self.label.setText(load)
                 self.web.load(QUrl(load))
                 del sys.argv[1:]
-
         
             elif url.startswith('https://'):
                 change=str(url)
@@ -179,7 +177,6 @@ class Ui_MainWindow(QMainWindow):
                                  			        
 ##################################
 #####Search engines & default (Now. Privatelee).
-
     def extra(self):
         search=self.Search.text()
         text=self.switch_2.text()
@@ -229,7 +226,6 @@ class Ui_MainWindow(QMainWindow):
         f.close()
 
 #Set label text.    
-
     def notice_new_bookmark(self):
         self.label.setText(label.bookmarked())
 
@@ -252,7 +248,7 @@ class Ui_MainWindow(QMainWindow):
         
 #About messagebox.
     def about(self):
-        buttonReply = QMessageBox.question(self, "RunIT-QT Browser Copyright (c) 2015 JJ Posti <techtimejourney.net>", "RunIT-QT  comes with ABSOLUTELY NO WARRANTY;  This is free software, and you are welcome to redistribute it under  GPL Version 2, June 1991 This is the 0.6 version(Autumn 2017). ___________________________________________________________________________ \n \nArgument support (since 0.6).\nStart browser like this: python /some/path/run.py 'gooogle.fi' and follow statusbar instructions. ___________________________________________________________________________\n \nFind text from html(since 0.6).\nWrite find:something to address field and press enter to find the first entry. Press enter again to find the second entry etc. ___________________________________________________________________________\n \nRight-click menu:Save image functionality(since 0.6). Right-click upon an image and choose Copy Image address. Next choose Save image and the Save as dialog should open.", QMessageBox.Ok )
+        buttonReply = QMessageBox.question(self, "RunIT-QT Browser Copyright (c) 2015 JJ Posti <techtimejourney.net>", "RunIT-QT  comes with ABSOLUTELY NO WARRANTY;  This is free software, and you are welcome to redistribute it under  GPL Version 2, June 1991 This is the 0.6.1 version(Autumn 2017). ___________________________________________________________________________ \n \nArgument support (since 0.6).\nStart browser like this: python /some/path/run.py 'gooogle.fi' and follow statusbar instructions. ___________________________________________________________________________\n \nFind text from html(since 0.6).\nWrite find:something to address field and press enter to find the first entry. Press enter again to find the second entry etc. ___________________________________________________________________________\n \nRight-click menu:Save image functionality(since 0.6). Right-click upon an image and choose Copy Image address. Next choose Save image and the Save as dialog should open.", QMessageBox.Ok )
         if buttonReply == QMessageBox.Ok:
             pass                    
 ####################################################

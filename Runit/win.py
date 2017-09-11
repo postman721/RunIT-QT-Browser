@@ -9,14 +9,13 @@ from subprocess import Popen
 #####################################
 #Declaring     def __init__(self, parent=None): gives us an ability to use this module as an independent window - but still in the 
 #main program because of super(NewPage, self).__init__(parent) that follows.
-
 class NewPage(QWebPage):
     def __init__(self, parent=None):
         super(NewPage, self).__init__(parent)
           
     def userAgentForUrl(self, url):
         ''' Returns a User Agent that will be seen by the website. '''
-        return "Mozilla/5.0 (X11; Linux) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+        return "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) RunIT-QT Browser/0.6.1 Safari/538.1"
     
     def triggerAction(self, action, checked=False):
         if action == QWebPage.OpenLinkInNewWindow:
