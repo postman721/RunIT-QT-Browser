@@ -11,6 +11,8 @@ Python QT5 web browser.
 
 This release contains very notable coding changes. The browser is now separated into different modules and code is partially rewritten and commenting is improved. Layout issues have been resolved together with many memory management issues, which were present in the previous releases. The result should be a more robust and a lot more functional browser. The outlook has also received an upgrade via CSS.
 
+Version 0.6.1 increases stability and fixes HTML5 rendering issues.
+
 _________
 
 Dependencies (Debian base as an example)
