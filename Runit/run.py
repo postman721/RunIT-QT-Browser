@@ -3,7 +3,7 @@
 #for details see: http://www.gnu.org/copyleft/gpl.html. 
 #This is free software, and you are welcome to redistribute it under 
 #GPL Version 2, June 1991
-#This is the 0.6.1 version(Autumn 2017)
+#This is the 0.6.3 version(March 2018)
 #This version fixes HTML5 playback issues.
 #####Modules
 from PyQt5 import QtCore, QtGui, QtWidgets, QtWebKitWidgets
@@ -121,7 +121,7 @@ class Ui_MainWindow(QMainWindow):
                 del sys.argv[1:]
 
             else:
-                add="http://" + url
+                add="https://" + url
                 change=str(add)
                 self.address.setText(change)
                 load=self.address.text()
@@ -154,7 +154,7 @@ class Ui_MainWindow(QMainWindow):
                   del sys.argv[1:]
 
              else:
-                  change=str("http://" + url)
+                  change=str("https://" + url)
                   self.address.setText(change)
                   load=self.address.text()
                   self.label.setText(load)
@@ -176,7 +176,7 @@ class Ui_MainWindow(QMainWindow):
         self.web.setZoomFactor(self.web.zoomFactor()-.2)
                                  			        
 ##################################
-#####Search engines & default (Now. Privatelee).
+#####Search engines & default (Now. Startpage).
     def extra(self):
         search=self.Search.text()
         text=self.switch_2.text()
@@ -203,13 +203,13 @@ class Ui_MainWindow(QMainWindow):
 
         elif text == ('gs'):
 
-#Google.com search (english).        
-            adds1="https://www.google.com/search?q=" + search 
+#Startpage search (english).        
+            adds1="https://startpage.com/do/search?query=" + search 
             self.web.load(QUrl(adds1))
             print adds1
 
         else:
-            adds1="https://privatelee.com/search/?q=" + search 
+            adds1="https://startpage.com/do/search?query=" + search 
             self.web.load(QUrl(adds1))
             print adds1
                                     			               
@@ -248,7 +248,7 @@ class Ui_MainWindow(QMainWindow):
         
 #About messagebox.
     def about(self):
-        buttonReply = QMessageBox.question(self, "RunIT-QT Browser Copyright (c) 2015 JJ Posti <techtimejourney.net>", "RunIT-QT  comes with ABSOLUTELY NO WARRANTY;  This is free software, and you are welcome to redistribute it under  GPL Version 2, June 1991 This is the 0.6.1 version(Autumn 2017). ___________________________________________________________________________ \n \nArgument support (since 0.6).\nStart browser like this: python /some/path/run.py 'gooogle.fi' and follow statusbar instructions. ___________________________________________________________________________\n \nFind text from html(since 0.6).\nWrite find:something to address field and press enter to find the first entry. Press enter again to find the second entry etc. ___________________________________________________________________________\n \nRight-click menu:Save image functionality(since 0.6). Right-click upon an image and choose Copy Image address. Next choose Save image and the Save as dialog should open.", QMessageBox.Ok )
+        buttonReply = QMessageBox.question(self, "RunIT-QT Browser Copyright (c) 2015 JJ Posti <techtimejourney.net>", "RunIT-QT  comes with ABSOLUTELY NO WARRANTY;  This is free software, and you are welcome to redistribute it under  GPL Version 2, June 1991 This is the 0.6.3 version(March 2018). ___________________________________________________________________________ \n \nArgument support (since 0.6).\nStart browser like this: runit 'gooogle.fi' and follow statusbar instructions. ___________________________________________________________________________\n \nFind text from html(since 0.6).\nWrite find:something to address field and press enter to find the first entry. Press enter again to find the second entry etc. ___________________________________________________________________________\n \nRight-click menu:Save image functionality(since 0.6). Right-click upon an image and choose Copy Image address. Next choose Save image and the Save as dialog should open.", QMessageBox.Ok )
         if buttonReply == QMessageBox.Ok:
             pass                    
 ####################################################
@@ -395,7 +395,7 @@ class Ui_MainWindow(QMainWindow):
         self.switch_2.setObjectName(_fromUtf8("switch_2"))
         self.switch_2.setPlaceholderText("Switch")
         self.switch_2.setFixedSize(50, 24)
-        self.switch_2.setToolTip('gs=Google, wiki = Wikipedia,  tube = Youtube,  wolf = Wolfram Alpha. Empty = Privatelee (default)')
+        self.switch_2.setToolTip('gs=Startpage, wiki = Wikipedia,  tube = Youtube,  wolf = Wolfram Alpha. Empty = Startpage search (default)')
         self.switch_2.returnPressed.connect(self.extra)
         self.toolbar.addWidget(self.switch_2)
 
